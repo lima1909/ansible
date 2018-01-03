@@ -28,6 +28,7 @@ RUN mkdir /my && \
 
 ADD container.yml /my/workspace/first/container.yml
 ADD web /my/workspace/first/web
+ADD hello.html /my/workspace/first/hello.html
 ADD .bashrc /root/.bashrc
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
