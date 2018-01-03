@@ -1,0 +1,17 @@
+version: "2"
+settings:
+
+  conductor:
+    base: centos:7
+    roles_path:
+      - . 
+  project_name: first
+
+services: 
+  web:
+    from: "centos:7"
+    roles:
+      - web
+    ports:
+      - "8080:80"
+    command: ["nginx", "-g", "daemon off;"]

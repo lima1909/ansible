@@ -1,0 +1,5 @@
+alias ll='ls -la'
+alias ac='ansible-container'
+alias acb='ansible-container build'
+alias aci='ansible-container init'
+alias acr='ansible-container run'

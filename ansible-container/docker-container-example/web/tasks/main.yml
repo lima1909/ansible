@@ -1,0 +1,17 @@
+---
+
+  - name: epel
+    yum:
+      name: epel-release
+      state: present
+
+  - name: install nginx
+    yum:
+      name: nginx
+      state: installed
+
+  - name: copy html-file to nginx-dir
+    copy:
+      src: ../../hello.html
+      #      src: "{{ lookup ( 'pipe', 'dirname `pwd`' ) }}/*.html"
+      dest: /usr/share/nginx/html

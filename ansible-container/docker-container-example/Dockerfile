@@ -1,5 +1,7 @@
 FROM docker:dind 
 
+Maintainer lima1909 
+
 RUN apk update && apk upgrade && \
     apk add --no-cache \
 	py-pip \
@@ -26,6 +28,7 @@ RUN mkdir /my && \
 
 ADD container.yml /my/workspace/first/container.yml
 ADD web /my/workspace/first/web
+ADD .bashrc /root/.bashrc
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
 CMD []
